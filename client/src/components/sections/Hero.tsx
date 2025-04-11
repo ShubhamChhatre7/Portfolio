@@ -1,24 +1,18 @@
-import { useEffect, useRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
-import particlesConfig from "@/lib/particles-config";
 
 export function Hero() {
-  const particlesInit = async (engine: any) => {
-    await loadFull(engine);
-  };
-
   return (
     <section id="hero" className="min-h-screen relative flex items-center justify-center overflow-hidden pt-20">
-      <div className="absolute inset-0 -z-10">
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          options={particlesConfig as any}
-          className="absolute inset-0"
-        />
+      <div className="absolute inset-0 -z-10 bg-background">
+        {/* Animated background dots */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{ 
+            backgroundImage: 'radial-gradient(#7F5AF0 1px, transparent 1px)', 
+            backgroundSize: '40px 40px' 
+          }}></div>
+        </div>
       </div>
       
       <div className="container mx-auto px-6 z-10">

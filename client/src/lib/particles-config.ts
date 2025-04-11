@@ -4,7 +4,7 @@ const particlesConfig = {
       value: 80,
       density: {
         enable: true,
-        value_area: 800
+        area: 800
       }
     },
     color: {
@@ -21,7 +21,7 @@ const particlesConfig = {
       value: 3,
       random: true
     },
-    line_linked: {
+    links: {
       enable: true,
       distance: 150,
       color: "#7F5AF0",
@@ -34,18 +34,18 @@ const particlesConfig = {
       direction: "none",
       random: false,
       straight: false,
-      out_mode: "out",
+      outModes: "out",
       bounce: false
     }
   },
   interactivity: {
-    detect_on: "canvas",
+    detectsOn: "canvas",
     events: {
-      onhover: {
+      onHover: {
         enable: true,
         mode: "grab"
       },
-      onclick: {
+      onClick: {
         enable: true,
         mode: "push"
       },
@@ -54,16 +54,16 @@ const particlesConfig = {
     modes: {
       grab: {
         distance: 140,
-        line_linked: {
+        links: {
           opacity: 1
         }
       },
       push: {
-        particles_nb: 4
+        quantity: 4
       }
     }
   },
-  retina_detect: true
+  detectRetina: true
 };
 
 export default particlesConfig;
