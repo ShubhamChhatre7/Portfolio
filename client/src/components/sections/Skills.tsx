@@ -36,11 +36,11 @@ export function Skills() {
   ];
   
   const softSkills = [
-    { icon: Lightbulb, title: "Critical Thinking" },
-    { icon: MessageSquare, title: "Communication" },
-    { icon: UserPlus, title: "Teamwork" },
-    { icon: RefreshCw, title: "Adaptability" },
-    { icon: Clock1, title: "Time Management" }
+    { icon: <Lightbulb className="text-primary" />, title: "Critical Thinking" },
+    { icon: <MessageSquare className="text-primary" />, title: "Communication" },
+    { icon: <UserPlus className="text-primary" />, title: "Teamwork" },
+    { icon: <RefreshCw className="text-primary" />, title: "Adaptability" },
+    { icon: <Clock1 className="text-primary" />, title: "Time Management" }
   ];
   
   const coursework = [
@@ -141,7 +141,7 @@ export function Skills() {
                 viewport={{ once: true }}
               >
                 <div className="bg-primary/20 p-3 rounded-full mx-auto mb-3 w-12 h-12 flex items-center justify-center">
-                  {item.icon && <item.icon className="text-primary" />}
+                  {item.icon}
                 </div>
                 <h4 className="font-medium">{item.title}</h4>
               </motion.div>
